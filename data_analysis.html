@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Internship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background: #1e88e5;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .details, .section, .quiz, .enroll {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            display: inline-block;
+            background: #1e88e5;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #1565c0;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #1e88e5;
+            color: #fff;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #ffe082;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Data Analyst Internship</h1>
+        <p>Unlock the power of data and shape your future!</p>
+    </header>
+    <section class="details">
+        <h2>About the Internship</h2>
+        <p>Dive into the world of data analysis with hands-on training on data cleaning, visualization, and insights generation.</p>
+        <ul>
+            <li>Mode: Online</li>
+        </ul>
+    </section>
+    <section class="section">
+        <p>Read and Write the Quiz</p>
+        <h2>Data Analysis Guide</h2>
+        
+        <h3>1. Data Cleaning</h3>
+        <p>Real-world data is often messy, with missing values, duplicates, or inconsistencies. Cleaning data ensures accurate and reliable analysis.</p>
+        <p><strong>Key Concepts:</strong></p>
+        <ul>
+            <li><strong>Handling Missing Data:</strong> Identify missing values and use techniques like filling with mean/median or dropping rows with excessive missing entries.</li>
+            <li><strong>Dealing with Outliers:</strong> Use visualization (e.g., box plots) to identify and handle outliers effectively.</li>
+            <li><strong>Removing Duplicates:</strong> Clean duplicate entries to avoid inflated results.</li>
+        </ul>
+        <p><strong>Example (Python):</strong></p>
+        <pre>
+    <code>
+    import pandas as pd
+    data = {"Name": ["Alice", "Bob", None], "Age": [25, None, 30]}
+    df = pd.DataFrame(data)
+    
+    # Fill missing values with a default
+    df['Age'].fillna(df['Age'].mean(), inplace=True)
+    print(df)
+    </code>
+        </pre>
+    
+        <h3>2. Data Visualization</h3>
+        <p>Visualization helps uncover patterns and insights in data.</p>
+        <p><strong>Key Concepts:</strong></p>
+        <ul>
+            <li><strong>Types of Visualizations:</strong> Bar charts, line graphs, and scatter plots.</li>
+            <li><strong>Popular Tools:</strong> Tableau, Power BI, and Matplotlib.</li>
+        </ul>
+        <p><strong>Example (Python):</strong></p>
+        <pre>
+    <code>
+    import matplotlib.pyplot as plt
+    
+    categories = ['A', 'B', 'C']
+    values = [10, 20, 15]
+    
+    plt.bar(categories, values, color='skyblue')
+    plt.title('Bar Chart Example')
+    plt.xlabel('Categories')
+    plt.ylabel('Values')
+    plt.show()
+    </code>
+        </pre>
+    
+        <h3>3. Data Insights</h3>
+        <p>Insights help in decision-making and forecasting by extracting meaningful information from data.</p>
+        <p><strong>Key Concepts:</strong></p>
+        <ul>
+            <li><strong>Descriptive Analysis:</strong> Summarizes historical data using mean, median, mode, and standard deviation.</li>
+            <li><strong>Predictive Analysis:</strong> Forecasts future outcomes using techniques like regression and classification.</li>
+        </ul>
+        <p><strong>Example (Python - Predict Sales):</strong></p>
+        <pre>
+    <code>
+    from sklearn.linear_model import LinearRegression
+    import numpy as np
+    
+    # Example data
+    X = np.array([10, 20, 30, 40]).reshape(-1, 1)  # Marketing spend
+    y = np.array([100, 200, 300, 400])            # Sales
+    
+    # Model training
+    model = LinearRegression()
+    model.fit(X, y)
+    
+    # Predict
+    future_spend = np.array([50]).reshape(-1, 1)
+    predicted_sales = model.predict(future_spend)
+    print("Predicted Sales:", predicted_sales[0])
+    </code>
+        </pre>
+    
+        <h3>4. Further Learning</h3>
+        <p><a href="https://www.kaggle.com/">Explore Kaggle Datasets</a></p>
+        <p><a href="https://pandas.pydata.org/docs/">Learn Pandas</a></p>
+    </section>
+    
+    <section class="quiz">
+        <h2>Eligibility Quiz</h2>
+        <p>Test your skills and knowledge for the Data Analyst Internship.</p>
+        <a href="data_analyst_quiz.html" class="btn">Start Quiz</a>
+    </section>
+    <!-- Enrollment Section -->
+    <section class="enroll">
+        <h2>Enroll Now</h2>
+        <h3>Dear Future Data Analyst Enthusiasts</h3>
+        <ul>
+            <li><strong>📖 Read First:</strong> Before diving into the quiz, ensure you’ve read the content carefully to get an overview of what this internship has to offer.</li>
+            <li><strong>🎯 Take the Quiz:</strong> Your journey starts with a short eligibility quiz to assess your understanding.</li>
+            <li><strong>💻 Your Voice Matters:</strong> By filling out this form, you are expressing your interest. The domain with the highest interest will guide our focus and task development.</li>
+            <li><strong>🚀 Internship Tasks:</strong> Tasks and learning materials will be provided soon to help you gain hands-on experience in cybersecurity.</li>
+            <li><strong>✍️ Stay Committed:</strong> This internship is a gateway to building your skills and receiving a certificate of achievement upon completion.</li>
+        </ul>
+        <p>💡 Let your curiosity shape the future of this program!</p>
+        <p>Click the button below to fill out the Google Form for enrollment.</p>
+        <a href="https://forms.gle/5QmqvJMuBbUuAd4dA" target="_blank" class="btn">Enroll Now</a>
+    </section>
+    <footer class="footer">
+        <p>Contact us at: <a href="mailto:students5gclub@gmail.com">students5gclub@gmail.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Quiz & Submission Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .quiz-section, .submission-section {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #E8F5E9;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        /* Timer display */
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        input[type="radio"], input[type="email"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #submissionForm a {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        #sampleCertificate {
+            display: none;
+            margin-top: 30px;
+        }
+
+        #certificate {
+            text-align: center;
+            padding: 50px;
+            border: 4px solid #007BFF;
+            width: 80%;
+            margin: 0 auto;
+            display: none;
+            border-radius: 10px;
+            background-image: url('https://via.placeholder.com/800x600?text=Certificate+Background');
+            background-size: cover;
+            color: #fff;
+        }
+
+        #certificate h1, #certificate h2, #certificate h3 {
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        #certificate h3 {
+            font-weight: normal;
+        }
+
+        #certificate .domain {
+            color: #FFD700;
+        }
+
+        canvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Python Programming Quiz</h1>
+    </header>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="timer" id="timer">Time Left: 10:00</div>
+        <h3>Answer the questions and provide your email to qualify</h3>
+        <form id="quizForm">
+            <div class="question">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Questions -->
+            <div class="question">
+                <label>1. What is the output of the following Python code?</label><br>
+                <pre><code>print("Hello, World!")</code></pre>
+                <input type="radio" name="q1" value="A"> Hello World<br>
+                <input type="radio" name="q1" value="B"> Hello, World!<br>
+                <input type="radio" name="q1" value="C"> Syntax Error<br>
+                <input type="radio" name="q1" value="D"> None of the above<br>
+            </div>
+
+            <div class="question">
+                <label>2. Which of the following is the correct way to install Python on your computer?</label><br>
+                <input type="radio" name="q2" value="A"> Download from python.org<br>
+                <input type="radio" name="q2" value="B"> Use a USB stick<br>
+                <input type="radio" name="q2" value="C"> Purchase a Python installation disk<br>
+                <input type="radio" name="q2" value="D"> Use only online editors<br>
+            </div>
+
+            <div class="question">
+                <label>3. What data type does the following variable represent?</label><br>
+                <pre><code>name = "Alice"</code></pre>
+                <input type="radio" name="q3" value="A"> Integer<br>
+                <input type="radio" name="q3" value="B"> String<br>
+                <input type="radio" name="q3" value="C"> Float<br>
+                <input type="radio" name="q3" value="D"> List<br>
+            </div>
+
+            <div class="question">
+                <label>4. What is the output of the following code?</label><br>
+                <pre><code>x = 5  
+y = 3  
+print(x > y and x < 10)</code></pre>
+                <input type="radio" name="q4" value="A"> True<br>
+                <input type="radio" name="q4" value="B"> False<br>
+                <input type="radio" name="q4" value="C"> None<br>
+                <input type="radio" name="q4" value="D"> Error<br>
+            </div>
+
+            <div class="question">
+                <label>5. Which statement correctly uses a conditional block?</label><br>
+                <input type="radio" name="q5" value="A"> if age = 18:<br>
+                <input type="radio" name="q5" value="B"> if age == 18:<br>
+                <input type="radio" name="q5" value="C"> if (age => 18):<br>
+                <input type="radio" name="q5" value="D"> if (age eq 18):<br>
+            </div>
+
+            <div class="question">
+                <label>6. What is the output of the following loop?</label><br>
+                <pre><code>for i in range(3):  
+    print(i, end=" ")</code></pre>
+                <input type="radio" name="q6" value="A"> 0 1 2<br>
+                <input type="radio" name="q6" value="B"> 1 2 3<br>
+                <input type="radio" name="q6" value="C"> 0 1 2 3<br>
+                <input type="radio" name="q6" value="D"> None<br>
+            </div>
+
+            <div class="question">
+                <label>7. Which keyword is used to define a function in Python?</label><br>
+                <input type="radio" name="q7" value="A"> func<br>
+                <input type="radio" name="q7" value="B"> function<br>
+                <input type="radio" name="q7" value="C"> def<br>
+                <input type="radio" name="q7" value="D"> method<br>
+            </div>
+
+            <div class="question">
+                <label>8. What is the output of this string slicing operation?</label><br>
+                <pre><code>text = "Python"  
+print(text[0:3])</code></pre>
+                <input type="radio" name="q8" value="A"> Pyt<br>
+                <input type="radio" name="q8" value="B"> pyt<br>
+                <input type="radio" name="q8" value="C"> hon<br>
+                <input type="radio" name="q8" value="D"> Error<br>
+            </div>
+
+            <div class="question">
+                <label>9. Which method is used to add an element to a list?</label><br>
+                <input type="radio" name="q9" value="A"> append()<br>
+                <input type="radio" name="q9" value="B"> add()<br>
+                <input type="radio" name="q9" value="C"> extend()<br>
+                <input type="radio" name="q9" value="D"> insert()<br>
+            </div>
+
+            <div class="question">
+                <label>10. What does the following dictionary code output?</label><br>
+                <pre><code>person = {"name": "Alice", "age": 25}  
+print(person["age"])</code></pre>
+                <input type="radio" name="q10" value="A"> Alice<br>
+                <input type="radio" name="q10" value="B"> 25<br>
+                <input type="radio" name="q10" value="C"> Error<br>
+                <input type="radio" name="q10" value="D"> None<br>
+            </div>
+
+            <!-- Add the remaining questions similarly... -->
+            <div class="question">
+                <label>11. What is the correct way to write data to a file in Python?</label><br>
+                <input type="radio" name="q11" value="A"> write("file.txt", "Hello")<br>
+                <input type="radio" name="q11" value="B"> file.write("Hello")<br>
+                <input type="radio" name="q11" value="C"> with open("file.txt", "w") as file: file.write("Hello")<br>
+                <input type="radio" name="q11" value="D"> None of the above<br>
+            </div>
+    
+            <div class="question">
+                <label>12. What library is used for array manipulation in Python?</label><br>
+                <input type="radio" name="q12" value="A"> pandas<br>
+                <input type="radio" name="q12" value="B"> NumPy<br>
+                <input type="radio" name="q12" value="C"> random<br>
+                <input type="radio" name="q12" value="D"> math<br>
+            </div>
+    
+            <div class="question">
+                <label>13. How do you create a pandas DataFrame?</label><br>
+                <input type="radio" name="q13" value="A"> DataFrame({"Name": "Alice", "Age": 25})<br>
+                <input type="radio" name="q13" value="B"> import DataFrame from pandas<br>
+                <input type="radio" name="q13" value="C"> pd.DataFrame({"Name": ["Alice"], "Age": [25]})<br>
+                <input type="radio" name="q13" value="D"> None of the above<br>
+            </div>
+    
+            <!-- Email Analysis -->
+            <div class="question">
+                <label>14. Which function in Matplotlib is used to plot a graph?</label><br>
+                <input type="radio" name="q14" value="A"> plot()<br>
+                <input type="radio" name="q14" value="B"> graph()<br>
+                <input type="radio" name="q14" value="C"> show()<br>
+                <input type="radio" name="q14" value="D"> render()<br>
+            </div>
+    
+            <div class="question">
+                <label>15. What is the output of the following code?</label><br>
+                <pre><code>import numpy as np  
+arr = np.array([1, 2, 3])  
+print(arr * 2)</code></pre>
+                <input type="radio" name="q15" value="A"> [1, 2, 3, 1, 2, 3]<br>
+                <input type="radio" name="q15" value="B"> [1, 4, 9]<br>
+                <input type="radio" name="q15" value="C"> [2, 4, 6]<br>
+                <input type="radio" name="q15" value="D"> Error<br>
+            </div>
+    
+            <div class="question">
+                <label>16. What is the factorial of 4?</label><br>
+                <input type="radio" name="q16" value="A"> 24<br>
+                <input type="radio" name="q16" value="B"> 16<br>
+                <input type="radio" name="q16" value="C"> 8<br>
+                <input type="radio" name="q16" value="D"> 12<br>
+            </div>
+    
+            <div class="question">
+                <label>17. What is the sum of all even numbers between 1 and 10 (inclusive)?</label><br>
+                <input type="radio" name="q17" value="A"> 20<br>
+                <input type="radio" name="q17" value="B"> 30<br>
+                <input type="radio" name="q17" value="C"> 25<br>
+                <input type="radio" name="q17" value="D"> 40<br>
+            </div>
+    
+            <!-- Advanced Questions Across Topics -->
+            <div class="question">
+                <label>18. A number is said to be a "perfect square" if its square root is an integer. Which of the following numbers is NOT a perfect square?</label><br>
+                <input type="radio" name="q18" value="A"> 16<br>
+                <input type="radio" name="q18" value="B"> 25<br>
+                <input type="radio" name="q18" value="C"> 30<br>
+                <input type="radio" name="q18" value="D"> 36<br>
+            </div>
+    
+            <div class="question">
+                <label>19. Write a function to find the sum of all prime numbers between 1 and 50. What is the result?</label><br>
+                <input type="radio" name="q19" value="A"> 328<br>
+                <input type="radio" name="q19" value="B"> 381<br>
+                <input type="radio" name="q19" value="C"> 456<br>
+                <input type="radio" name="q19" value="D"> 275<br>
+            </div>
+    
+            <div class="question">
+                <label>20. A number is called special if it is divisible by both 3 and 5. How many special numbers are there between 1 and 100 (inclusive)?</label><br>
+                <input type="radio" name="q20" value="A"> 20<br>
+                <input type="radio" name="q20" value="B"> 15<br>
+                <input type="radio" name="q20" value="C"> 10<br>
+                <input type="radio" name="q20" value="D"> 6<br>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+        </form>
+
+        <!-- Result Display -->
+        <div id="result"></div>
+    </section>
+
+    <script>
+        // Timer countdown script
+        // Disable copy, cut, paste, and right-click
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('paste', (e) => e.preventDefault());
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        let timeLeft = 10 * 60; // 10 minutes in seconds
+        const timerDisplay = document.getElementById('timer');
+        const quizForm = document.getElementById('quizForm');
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+    // Display random questions and options
+    function displayQuestions() {
+        shuffleArray(questions);  // Shuffle questions
+        const questionsContainer = document.getElementById("questionsContainer");
+        questions.forEach(q => {
+            shuffleArray(q.options);  // Shuffle options
+            const questionDiv = document.createElement("div");
+            questionDiv.className = "question";
+            questionDiv.innerHTML = `<label>${q.text}</label><br>`;
+            q.options.forEach((opt, index) => {
+                const optionLetter = String.fromCharCode(65 + index);  // A, B, C, D
+                questionDiv.innerHTML += `<input type="radio" name="${q.id}" value="${optionLetter}"> ${opt}<br>`;
+            });
+            questionsContainer.appendChild(questionDiv);
+        });
+    }
+
+    // Timer function
+    function startTimer() {
+        const timerInterval = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Time's up! The quiz will be submitted automatically.");
+                checkAnswers(); // Automatically submit the quiz
+            } else {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerDisplay.textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                timeLeft--;
+            }
+        }, 1000);
+    }
+
+    // Start the timer when the page loads
+    window.onload = () => {
+        displayQuestions(); // Display shuffled questions
+        startTimer();
+    };
+    
+        // Start the timer when the page loads
+        window.onload = startTimer;
+    
+        // Function to check answers and display result
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "B", q2: "A", q3: "B", q4: "A", q5: "B",
+                q6: "A", q7: "C", q8: "A", q9: "A", q10: "B",
+                q11: "C", q12: "B", q13: "C", q14: "A", q15: "C",
+                q16: "A", q17: "A", q18: "C", q19: "B", q20: "C"
+            };
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+    
+            Object.keys(correctAnswers).forEach((question) => {
+                const userAnswer = quizForm[question].value;
+                if (userAnswer === correctAnswers[question]) {
+                    score += 1;
+                }
+            });
+    
+            const result = document.getElementById('result');
+            result.textContent = `You scored ${score} out of ${totalQuestions}.`;
+
+            if (score >= 15) {
+                window.location.href = "python_development.html";  // Redirect to cyber_security.html
+            } else {
+                window.location.href = "index.html";  // Redirect to index.html
+            }
+
+            // Disable quiz form after submission
+            quizForm.querySelectorAll('input, button').forEach(el => el.disabled = true);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Opportunities</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 40px;
+        }
+
+        /* Internship Grid */
+        .internship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Internship Card */
+        .internship-card {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            color: #ffff00;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .internship-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .internship-card .btn {
+            margin-top: 10px;
+            background-color: rgba(255, 0, 0, 0.8);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .internship-card .btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Card Hover Effect */
+        .internship-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <section id="internships" class="section internships">
+        <h2>Select Your Internship</h2>
+        <div class="internship-grid">
+            <!-- Cyber Security -->
+            <div class="internship-card" style="background-image: url('cyber-security-bg.jpg');">
+                <h3>Cyber Security</h3>
+                <a href="cyber_security.html" class="btn">Enroll Now</a>
+            </div>
+    
+            <!-- Java Development -->
+            <div class="internship-card" style="background-image: url('java-bg.jpg');">
+                <h3>Java Development</h3>
+                <a href="java_development.html" class="btn">Enroll Now</a>
+            </div>
+    
+            <!-- Python Development -->
+            <div class="internship-card" style="background-image: url('python-bg.jpg');">
+                <h3>Python Development</h3>
+                <a href="python_development.html" class="btn">Enroll Now</a>
+            </div>
+    
+            <!-- C Programming -->
+            <div class="internship-card" style="background-image: url('c-programming-bg.jpg');">
+                <h3>C Programming</h3>
+                <a href="c_programming.html" class="btn">Enroll Now</a>
+            </div>
+    
+            <!-- C++ Programming -->
+            <div class="internship-card" style="background-image: url('c++-bg.jpg');">
+                <h3>C++ Programming</h3>
+                <a href="c++_programming.html" class="btn">Enroll Now</a>
+            </div>
+    
+            <!-- Data Analysis -->
+            <div class="internship-card" style="background-image: url('data-analysis-bg.jpg');">
+                <h3>Data Analysis</h3>
+                <a href="data_analysis.html" class="btn">Enroll Now</a>
+            </div>
+    
+            <!-- Web Development -->
+            <div class="internship-card" style="background-image: url('web-development-bg.jpg');">
+                <h3>Web Development</h3>
+                <a href="web_development.html" class="btn">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

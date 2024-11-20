@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Internship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+            color: #333;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .details, .section, .quiz, .enroll {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 850px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .details:hover, .section:hover, .quiz:hover, .enroll:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 0;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2c3e50;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #34495e;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #2c3e50;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>C programming Internship</h1>
+        <p>Unlock the power of data and shape your future!</p>
+    </header>
+    <section class="details">
+        <h2>About the Internship</h2>
+        <p>Dive deep into the world of C programming. From basics to advanced concepts like STL and pointers, this internship is perfect for anyone aiming to master this powerful language.</p>
+        <ul>
+            <li>Mode: Online</li>
+        </ul>
+    </section>
+    <section class="section">
+        <p>Read and Write the Quiz</p>
+        <h2>C Learning Guide</h2>
+        <h3>1. Getting Started with C Programming</h3>
+        <ul>
+            <li>C is a powerful, structured programming language used in system programming and performance-critical applications.</li>
+            <li>Set up your environment using a C compiler like GCC or IDEs such as Code::Blocks or Visual Studio.</li>
+            <li>Write and run your first program:</li>
+        </ul>
+        <pre>
+    <code>
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        printf("Hello, World!\n");
+        return 0;
+    }
+    </code>
+        </pre>
+        
+        <h3>2. Data Types and Variables</h3>
+        <ul>
+            <li>Understand basic data types like <code>int</code>, <code>float</code>, <code>double</code>, and <code>char</code>.</li>
+            <li>Example of declaring variables:</li>
+        </ul>
+        <pre>
+    <code>
+    int age = 25;
+    float salary = 50000.50;
+    char grade = 'A';
+    </code>
+        </pre>
+        
+        <h3>3. Operators</h3>
+        <ul>
+            <li>Arithmetic Operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+            <li>Comparison Operators: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+            <li>Logical Operators: <code>&&</code>, <code>||</code>, <code>!</code></li>
+        </ul>
+        <pre>
+    <code>
+    int a = 10, b = 20;
+    if (a < b && b > 15) {
+        printf("Condition is true\n");
+    }
+    </code>
+        </pre>
+    
+        <h3>4. Control Flow (Conditional Statements)</h3>
+        <ul>
+            <li><strong>If-Else:</strong> Use conditions to control program flow.</li>
+        </ul>
+        <pre>
+    <code>
+    int age = 18;
+    if (age >= 18) {
+        printf("Eligible to vote\n");
+    } else {
+        printf("Not eligible to vote\n");
+    }
+    </code>
+        </pre>
+    
+        <h3>5. Loops</h3>
+        <ul>
+            <li>For Loop: Repeats a block of code a fixed number of times.</li>
+        </ul>
+        <pre>
+    <code>
+    for (int i = 1; i <= 5; i++) {
+        printf("Iteration %d\n", i);
+    }
+    </code>
+        </pre>
+        
+        <ul>
+            <li>While Loop: Runs as long as the condition is true.</li>
+        </ul>
+        <pre>
+    <code>
+    int n = 5;
+    while (n > 0) {
+        printf("%d\n", n);
+        n--;
+    }
+    </code>
+        </pre>
+    
+        <h3>6. Functions</h3>
+        <ul>
+            <li>Break your program into reusable blocks of code.</li>
+        </ul>
+        <pre>
+    <code>
+    #include &lt;stdio.h&gt;
+    
+    int add(int a, int b) {
+        return a + b;
+    }
+    
+    int main() {
+        int result = add(10, 20);
+        printf("Sum: %d\n", result);
+        return 0;
+    }
+    </code>
+        </pre>
+    
+        <h3>7. Arrays</h3>
+        <ul>
+            <li>Store multiple values of the same type in an array.</li>
+        </ul>
+        <pre>
+    <code>
+    int numbers[5] = {10, 20, 30, 40, 50};
+    printf("First element: %d\n", numbers[0]);
+    </code>
+        </pre>
+    
+        <h3>8. Strings</h3>
+        <ul>
+            <li>Strings are arrays of characters ending with a null character <code>\0</code>.</li>
+        </ul>
+        <pre>
+    <code>
+    char name[] = "Alice";
+    printf("Name: %s\n", name);
+    </code>
+        </pre>
+    
+        <h3>9. Pointers</h3>
+        <ul>
+            <li>Pointers store the address of another variable.</li>
+        </ul>
+        <pre>
+    <code>
+    int x = 10;
+    int *ptr = &x;
+    printf("Value of x: %d\n", *ptr);
+    </code>
+        </pre>
+    
+        <h3>10. File Handling</h3>
+        <ul>
+            <li>Read and write files in C using <code>FILE</code> pointers.</li>
+        </ul>
+        <pre>
+    <code>
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        FILE *file = fopen("data.txt", "w");
+        if (file != NULL) {
+            fprintf(file, "Hello, File!\n");
+            fclose(file);
+        }
+        return 0;
+    }
+    </code>
+        </pre>
+    
+        <p><a href="https://www.programiz.com/c-programming" target="_blank">Learn More About C Programming</a></p>
+    </section>
+    
+    <section class="quiz">
+        <h2>Eligibility Quiz</h2>
+        <a href="c_prog_quiz.html" class="btn">Start Quiz</a>
+    </section>
+    <!-- Enrollment Section -->
+    <section class="enroll">
+        <h2>Enroll Now</h2>
+        <h3>Dear Future C Enthusiasts</h3>
+        <ul>
+            <li><strong>📖 Read First:</strong> Before diving into the quiz, ensure you’ve read the content carefully to get an overview of what this internship has to offer.</li>
+            <li><strong>🎯 Take the Quiz:</strong> Your journey starts with a short eligibility quiz to assess your understanding.</li>
+            <li><strong>💻 Your Voice Matters:</strong> By filling out this form, you are expressing your interest. The domain with the highest interest will guide our focus and task development.</li>
+            <li><strong>🚀 Internship Tasks:</strong> Tasks and learning materials will be provided soon to help you gain hands-on experience in cybersecurity.</li>
+            <li><strong>✍️ Stay Committed:</strong> This internship is a gateway to building your skills and receiving a certificate of achievement upon completion.</li>
+        </ul>
+        <p>💡 Let your curiosity shape the future of this program!</p>
+        <p>Click the button below to fill out the Google Form for enrollment.</p>
+        <a href="https://forms.gle/5QmqvJMuBbUuAd4dA" target="_blank" class="btn">Enroll Now</a>
+    </section>
+    <footer class="footer">
+        <p>Contact us at: <a href="mailto:students5gclub@gmail.com">students5gclub@gmail.com</a></p>
+    </footer>
+</body>
+</html>

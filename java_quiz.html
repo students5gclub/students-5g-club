@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Quiz & Submission Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #FF5733;
+            color: white;
+        }
+
+        .quiz-section, .submission-section {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #FFF3E0;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        /* Timer display */
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        input[type="radio"], input[type="email"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #submissionForm a {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        #sampleCertificate {
+            display: none;
+            margin-top: 30px;
+        }
+
+        #certificate {
+            text-align: center;
+            padding: 50px;
+            border: 4px solid #007BFF;
+            width: 80%;
+            margin: 0 auto;
+            display: none;
+            border-radius: 10px;
+            background-image: url('https://via.placeholder.com/800x600?text=Certificate+Background');
+            background-size: cover;
+            color: #fff;
+        }
+
+        #certificate h1, #certificate h2, #certificate h3 {
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        #certificate h3 {
+            font-weight: normal;
+        }
+
+        #certificate .domain {
+            color: #FFD700;
+        }
+
+        canvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Java Programming Quiz</h1>
+    </header>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="timer" id="timer">Time Left: 10:00</div>
+        <h3>Answer the questions and provide your email to qualify</h3>
+        <form id="quizForm">
+            <div class="question">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Questions -->
+            <div class="question">
+                <label>1. What is the correct way to declare a variable in Java?</label><br>
+                <input type="radio" name="q1" value="A"> int 1x = 10;<br>
+                <input type="radio" name="q1" value="B"> int x = 10;<br>
+                <input type="radio" name="q1" value="C"> 10 = int x;<br>
+                <input type="radio" name="q1" value="D"> x int = 10;<br>
+            </div>
+
+            <div class="question">
+                <label>2. What is the default value of an int variable in Java?</label><br>
+                <input type="radio" name="q2" value="A"> 0<br>
+                <input type="radio" name="q2" value="B"> null<br>
+                <input type="radio" name="q2" value="C"> Undefined<br>
+                <input type="radio" name="q2" value="D"> -1<br>
+            </div>
+
+            <div class="question">
+                <label>3. Which keyword is used to define a constant in Java?</label><br>
+                <input type="radio" name="q3" value="A"> static<br>
+                <input type="radio" name="q3" value="B"> final<br>
+                <input type="radio" name="q3" value="C"> const<br>
+                <input type="radio" name="q3" value="D"> abstract<br>
+            </div>
+
+            <div class="question">
+                <label>4. What will be the output of the following code?</label><br>
+                <pre><code>   System.out.println(10 + 20 + "Java");</code></pre>
+                <input type="radio" name="q4" value="A"> Java30<br>
+                <input type="radio" name="q4" value="B"> 30Java<br>
+                <input type="radio" name="q4" value="C"> 10Java20<br>
+                <input type="radio" name="q4" value="D"> None of the above<br>
+            </div>
+
+            <div class="question">
+                <label>5. Which of these is not a data type in Java?</label><br>
+                <input type="radio" name="q5" value="A"> String<br>
+                <input type="radio" name="q5" value="B"> float<br>
+                <input type="radio" name="q5" value="C"> character<br>
+                <input type="radio" name="q5" value="D"> boolean<br>
+            </div>
+
+            <div class="question">
+                <label>6. What does encapsulation achieve in Java?</label><br>
+                <input type="radio" name="q6" value="A"> Hiding implementation details<br>
+                <input type="radio" name="q6" value="B"> Enforcing securitye<br>
+                <input type="radio" name="q6" value="C"> Enabling polymorphism<br>
+                <input type="radio" name="q6" value="D"> All of the above<br>
+            </div>
+
+            <div class="question">
+                <label>7. What is the keyword used to inherit a class in Java?</label><br>
+                <input type="radio" name="q7" value="A"> extends<br>
+                <input type="radio" name="q7" value="B"> implements<br>
+                <input type="radio" name="q7" value="C"> inherit<br>
+                <input type="radio" name="q7" value="D"> super<br>
+            </div>
+
+            <div class="question">
+                <label>8. Which of the following is a characteristic of a constructor in Java?</label><br>
+                <input type="radio" name="q8" value="A"> It has no return type<br>
+                <input type="radio" name="q8" value="B"> It is named after the class<br>
+                <input type="radio" name="q8" value="C"> It is automatically called when an object is created<br>
+                <input type="radio" name="q8" value="D"> All of the above<br>
+            </div>
+
+            <div class="question">
+                <label>9. Which access modifier allows visibility in all classes?</label><br>
+                <input type="radio" name="q9" value="A"> private<br>
+                <input type="radio" name="q9" value="B"> protected<br>
+                <input type="radio" name="q9" value="C"> public<br>
+                <input type="radio" name="q9" value="D"> default<br>
+            </div>
+
+            <div class="question">
+                <label>10. What is the term for when a subclass provides a specific implementation of a method already defined in its superclass?</label><br>
+                <input type="radio" name="q10" value="A"> Overloading<br>
+                <input type="radio" name="q10" value="B"> Overriding<br>
+                <input type="radio" name="q10" value="C"> Encapsulation<br>
+                <input type="radio" name="q10" value="D"> Polymorphism<br>
+            </div>
+
+            <!-- Add the remaining questions similarly... -->
+            <div class="question">
+                <label>11. Which collection in Java allows duplicate elements?</label><br>
+                <input type="radio" name="q11" value="A"> Set<br>
+                <input type="radio" name="q11" value="B"> List<br>
+                <input type="radio" name="q11" value="C"> Map<br>
+                <input type="radio" name="q11" value="D"> Queue<br>
+            </div>
+    
+            <div class="question">
+                <label>12. What does HashMap use to store key-value pairs?</label><br>
+                <input type="radio" name="q12" value="A"> Arrays<br>
+                <input type="radio" name="q12" value="B"> Hash Tables<br>
+                <input type="radio" name="q12" value="C"> Stacks<br>
+                <input type="radio" name="q12" value="D"> Binary Trees<br>
+            </div>
+    
+            <div class="question">
+                <label>13. What is the purpose of the BufferedReader class?</label><br>
+                <input type="radio" name="q13" value="A"> To buffer streams for better performance<br>
+                <input type="radio" name="q13" value="B"> To read binary data<br>
+                <input type="radio" name="q13" value="C"> To write data to files<br>
+                <input type="radio" name="q13" value="D"> To manage threads<br>
+            </div>
+    
+            <!-- Email Analysis -->
+            <div class="question">
+                <label>14. Which of these classes is used for file handling in Java?</label><br>
+                <input type="radio" name="q14" value="A"> Scanner<br>
+                <input type="radio" name="q14" value="B"> File<br>
+                <input type="radio" name="q14" value="C"> HashSet<br>
+                <input type="radio" name="q14" value="D"> FileReader<br>
+            </div>
+    
+            <div class="question">
+                <label>15. What does <b>System.out.println()</b> do?</label><br>
+                <input type="radio" name="q15" value="A"> Reads input<br>
+                <input type="radio" name="q15" value="B"> Writes output to the console<br>
+                <input type="radio" name="q15" value="C"> Writes output to a file<br>
+                <input type="radio" name="q15" value="D"> None of the above<br>
+            </div>
+    
+            <div class="question">
+                <label>16. Which sorting algorithm is the fastest in the average case?</label><br>
+                <input type="radio" name="q16" value="A"> Bubble Sort<br>
+                <input type="radio" name="q16" value="B"> Merge Sort<br>
+                <input type="radio" name="q16" value="C"> Quick Sort<br>
+                <input type="radio" name="q16" value="D"> Insertion Sort<br>
+            </div>
+    
+            <div class="question">
+                <label>17. What is the time complexity of searching an element in a HashMap?</label><br>
+                <input type="radio" name="q17" value="A"> O(n)<br>
+                <input type="radio" name="q17" value="B"> O(1)<br>
+                <input type="radio" name="q17" value="C"> O(log n)<br>
+                <input type="radio" name="q17" value="D"> O(n^2)<br>
+            </div>
+    
+            <!-- Advanced Questions Across Topics -->
+            <div class="question">
+                <label>18. Which data structure uses the FIFO principle?</label><br>
+                <input type="radio" name="q18" value="A"> Stack<br>
+                <input type="radio" name="q18" value="B"> Queue<br>
+                <input type="radio" name="q18" value="C"> Linked List<br>
+                <input type="radio" name="q18" value="D"> Binary Tree<br>
+            </div>
+    
+            <div class="question">
+                <label>19. Which of these operations is faster in a LinkedList compared to an ArrayList?</label><br>
+                <input type="radio" name="q19" value="A"> Random Access<br>
+                <input type="radio" name="q19" value="B"> Addition/Removal at the beginning or middle<br>
+                <input type="radio" name="q19" value="C"> Searching an element<br>
+                <input type="radio" name="q19" value="D"> Sorting elements<br>
+            </div>
+    
+            <div class="question">
+                <label>20. What is the best data structure to represent hierarchical relationships?</label><br>
+                <input type="radio" name="q20" value="A"> Array<br>
+                <input type="radio" name="q20" value="B"> Graph<br>
+                <input type="radio" name="q20" value="C"> Tree<br>
+                <input type="radio" name="q20" value="D"> Stack<br>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+        </form>
+
+        <!-- Result Display -->
+        <div id="result"></div>
+    </section>
+
+    <script>
+        // Timer countdown script
+        // Disable copy, cut, paste, and right-click
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('paste', (e) => e.preventDefault());
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        let timeLeft = 10 * 60; // 10 minutes in seconds
+        const timerDisplay = document.getElementById('timer');
+        const quizForm = document.getElementById('quizForm');
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+    // Display random questions and options
+    function displayQuestions() {
+        shuffleArray(questions);  // Shuffle questions
+        const questionsContainer = document.getElementById("questionsContainer");
+        questions.forEach(q => {
+            shuffleArray(q.options);  // Shuffle options
+            const questionDiv = document.createElement("div");
+            questionDiv.className = "question";
+            questionDiv.innerHTML = `<label>${q.text}</label><br>`;
+            q.options.forEach((opt, index) => {
+                const optionLetter = String.fromCharCode(65 + index);  // A, B, C, D
+                questionDiv.innerHTML += `<input type="radio" name="${q.id}" value="${optionLetter}"> ${opt}<br>`;
+            });
+            questionsContainer.appendChild(questionDiv);
+        });
+    }
+
+    // Timer function
+    function startTimer() {
+        const timerInterval = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Time's up! The quiz will be submitted automatically.");
+                checkAnswers(); // Automatically submit the quiz
+            } else {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerDisplay.textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                timeLeft--;
+            }
+        }, 1000);
+    }
+
+    // Start the timer when the page loads
+    window.onload = () => {
+        displayQuestions(); // Display shuffled questions
+        startTimer();
+    };
+    
+        // Start the timer when the page loads
+        window.onload = startTimer;
+    
+        // Function to check answers and display result
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "B", q2: "A", q3: "B", q4: "B", q5: "C",
+                q6: "A", q7: "A", q8: "D", q9: "C", q10: "B",
+                q11: "B", q12: "B", q13: "A", q14: "B", q15: "B",
+                q16: "C", q17: "B", q18: "B", q19: "B", q20: "C"
+            };
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+    
+            Object.keys(correctAnswers).forEach((question) => {
+                const userAnswer = quizForm[question].value;
+                if (userAnswer === correctAnswers[question]) {
+                    score += 1;
+                }
+            });
+    
+            const result = document.getElementById('result');
+            result.textContent = `You scored ${score} out of ${totalQuestions}.`;
+
+            if (score >= 15) {
+                window.location.href = "java_development.html";  // Redirect to cyber_security.html
+            } else {
+                window.location.href = "index.html";  // Redirect to index.html
+            }
+
+            // Disable quiz form after submission
+            quizForm.querySelectorAll('input, button').forEach(el => el.disabled = true);
+        }
+    </script>
+</body>
+</html>

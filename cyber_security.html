@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Internship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .details, .section, .quiz, .enroll {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .details h2, .section h2, .quiz h2, .enroll h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #f0a500;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Cyber Security Internship</h1>
+        <p>Empower your future with top-notch cybersecurity skills!</p>
+    </header>
+
+    <!-- Internship Details Section -->
+    <section class="details">
+        <h2>About the Internship</h2>
+        <p>Learn the fundamentals of Cyber Security, including network protection, ethical hacking, and secure coding practices.</p>
+        <ul>
+            <li>Mode: Online</li>
+        </ul>
+    </section>
+
+    <!-- Kali Linux Learning Guide Section -->
+    <section class="section">
+        <p>Read and Write the Quiz</p>
+        <h2>Kali Linux Learning Guide</h2>
+        <p>Kali Linux is a powerful Linux distribution used for cybersecurity, penetration testing, and ethical hacking. Here's a structured guide to get started:</p>
+
+        <h3>1. Introduction to Kali Linux</h3>
+        <p>Explore essential tools like Metasploit, Wireshark, Nmap, Hydra, and John the Ripper for ethical hacking and security testing.</p>
+
+        <h3>2. Tools and Their Uses</h3>
+        <ul>
+            <li><strong>Metasploit:</strong> Launch and manage exploits against target systems.</li>
+            <li><strong>Wireshark:</strong> Analyze network traffic and protocols in real time.</li>
+            <li><strong>John the Ripper:</strong> Crack passwords using wordlists and brute force.</li>
+            <li><strong>Hydra:</strong> Perform brute force attacks to crack passwords across multiple protocols.</li>
+        </ul>
+
+        <h3>3. Penetration Testing Essentials</h3>
+        <p>Effective penetration testing involves:</p>
+        <ul>
+            <li><strong>Information Gathering:</strong> Learn about your target system's vulnerabilities.</li>
+            <li><strong>DNS Enumeration:</strong> Use tools like <code>dig</code> to uncover domain DNS records.</li>
+        </ul>
+
+        <h3>4. Network and Protocol Analysis</h3>
+        <p>Use Wireshark for in-depth network traffic analysis. Capture and analyze traffic types such as TCP, UDP, ICMP, and ARP.</p>
+        <ul>
+            <li><strong>HTTP Traffic Filter:</strong> <code>http</code></li>
+            <li><strong>HTTPS Traffic Filter:</strong> <code>tcp.port == 443</code></li>
+            <li><strong>Vulnerable Protocols:</strong> Avoid using Telnet; opt for SSH or HTTPS.</li>
+        </ul>
+
+        <h3>5. Password Security and Cracking</h3>
+        <ul>
+            <li><strong>Techniques:</strong> Brute force attacks, hash cracking with rainbow tables, and using salt for password security.</li>
+            <li><strong>Tools:</strong> John the Ripper, Hydra.</li>
+        </ul>
+
+        <h3>6. Phishing and Email Security</h3>
+        <ul>
+            <li><strong>Phishing Tactics:</strong> Beware of fake login pages and email spoofing.</li>
+            <li><strong>Email Header Analysis:</strong> Use tools like <code>exiftool</code> to extract metadata.</li>
+        </ul>
+
+        <h3>7. Nmap Scanning</h3>
+        <ul>
+            <li><strong>Port States:</strong> Identify ports as open, closed, or filtered.</li>
+            <li><strong>Advanced Flags:</strong> <code>-O</code> for OS detection, <code>-A</code> for aggressive scans.</li>
+        </ul>
+        <h3>Further Reading and Practice</h3>
+        <p><a href="https://www.metasploit.com/">Metasploit Framework</a></p>
+        <p><a href="https://www.stationx.net/nmap-cheat-sheet/">Nmap Cheat Sheet</a></p>
+        <p><a href="https://www.wireshark.org/docs/wsug_html_chunked/">Wireshark User Guide</a></p>
+        <p><a href="https://www.kali.org/docs/">Kali Linux Official Documentation</a></p>
+
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz">
+        <h2>Eligibility Quiz</h2>
+        <p>Take a quick quiz to test your eligibility for the internship.</p>
+        <a href="cyber_security_quiz.html" class="btn">Start Quiz</a>
+    </section>
+
+    <!-- Enrollment Section -->
+    <section class="enroll">
+        <h2>Enroll Now</h2>
+        <h3>Dear Future Cybersecurity Enthusiasts</h3>
+        <ul>
+            <li><strong>📖 Read First:</strong> Before diving into the quiz, ensure you’ve read the content carefully to get an overview of what this internship has to offer.</li>
+            <li><strong>🎯 Take the Quiz:</strong> Your journey starts with a short eligibility quiz to assess your understanding.</li>
+            <li><strong>💻 Your Voice Matters:</strong> By filling out this form, you are expressing your interest. The domain with the highest interest will guide our focus and task development.</li>
+            <li><strong>🚀 Internship Tasks:</strong> Tasks and learning materials will be provided soon to help you gain hands-on experience in cybersecurity.</li>
+            <li><strong>✍️ Stay Committed:</strong> This internship is a gateway to building your skills and receiving a certificate of achievement upon completion.</li>
+        </ul>
+        <p>💡 Let your curiosity shape the future of this program!</p>
+        <p>Click the button below to fill out the Google Form for enrollment.</p>
+        <a href="https://forms.gle/5QmqvJMuBbUuAd4dA" target="_blank" class="btn">Enroll Now</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Contact us at: <a href="mailto:students5gclub@gmail.com">students5gclub</a></p>
+    </footer>
+</body>
+</html>
